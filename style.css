@@ -93,17 +93,28 @@ main .profile-wrapper {
 .images {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
 }
 .image {
+  display: none;
   width: 33.3%;
-  padding: 0 50px;
 }
 .image img {
   max-width: 100%;
+  object-fit: contain;
 }
 .image p {
-  display: block;
+  display: none;
   text-align: center;
+}
+.btn {
+  border: none;
+  background-color: white;
+  color: #2c3333;
+  font-size: 50px;
+  cursor: pointer;
 }
 .form-wrapper {
   display: flex;
@@ -122,12 +133,41 @@ textarea {
   font-size: 12px;
 }
 .form-wrapper button {
-  width: 350px;
+  width: 250px;
   background-color: #f5ea5a;
+  padding: 20px 0;
   padding: 5px 0;
   border: none;
   border-radius: 5px;
   opacity: 0.8;
+}
+.form-wrapper button:hover {
+  cursor: pointer;
+}
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 25px;
+  text-align: center;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  border-bottom: 1px #ccc solid;
+  font-size: 15px;
+  text-align: left;
+}
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  display: none;
+  padding: 0 18px;
+  text-align: left;
 }
 footer .container {
   display: flex;
@@ -146,4 +186,29 @@ footer ul li {
   font-size: 12px;
   padding: 7px 0;
   opacity: 0.8;
+}
+
+/*Animasi*/
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -49,28 +49,41 @@
       <div class="project-wrapper">
         <h3>Proyek Contoh</h3>
         <div class="images">
-          <div class="image">
+          <button class="btn left"><</button>
+          <div class="image fade">
             <img src="src/1.png" alt="" />
             <p>Image 1</p>
           </div>
-          <div class="image">
+          <div class="image fade">
             <img src="src/2.png" alt="" />
             <p>Image 2</p>
           </div>
-          <div class="image">
+          <div class="image fade">
             <img src="src/3.png" alt="" />
             <p>Image 3</p>
           </div>
+          <button class="btn right">></button>
         </div>
       </div>
       <div class="form-wrapper">
         <h3>Hubungi Saya</h3>
         <form action="">
-          <input type="text" placeholder="Email (Diperlukan)" />
+          <input type="text" id="email" placeholder="Email (Diperlukan)" />
           <br />
-          <textarea name="" id="" placeholder="Message (Diperlukan)"></textarea>
+          <textarea id="message" placeholder="Message (Diperlukan)"></textarea>
         </form>
-        <button type="submit">Kirim</button>
+        <button type="submit" id="submit" class="submit">Kirim</button>
+      </div>
+      <div class="faq-wrapper">
+        <h2>FAQ</h2>
+        <button class="accordion">Email</button>
+        <div class="panel">
+          <p>Masukkan email sesuai dengan email yang anda miliki</p>
+        </div>
+        <button class="accordion">Message</button>
+        <div class="panel">
+          <p>Masukkan pesan minimal 4 kata</p>
+        </div>
       </div>
     </body>
     <footer>
@@ -83,5 +96,6 @@
         </ul>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
